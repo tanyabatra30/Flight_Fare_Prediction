@@ -1,0 +1,154 @@
+/* .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(88, 40, 177, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"], form select, form input[type="date"], form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: rgb(223, 62, 62);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+   .container {
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input[type="text"], form select, form input[type="date"], form input[type="number"] {
+        font-size: 14px;
+    }
+} */
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.current-time {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+}
+
+#prediction {
+    font-size: 18px;
+    color: #333; /* Adjust the color as needed */
+    margin-top: 20px; /* Adds space above the prediction message */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.about-img {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.icon {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+.btn-primary {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #007bff;
+    border: 1px solid transparent;
+    padding:.375rem.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius:.25rem;
+    transition: color.15s ease-in-out,background-color.15s ease-in-out,border-color.15s ease-in-out,box-shadow.15s ease-in-out;
+}
