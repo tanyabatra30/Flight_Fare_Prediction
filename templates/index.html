@@ -82,61 +82,55 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="departure">Departure:</label>
-                            <select class="form-control" id="departure" name="departure">
-                                <option value="">Select Departure</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Mumbai">Mumbai</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Ahmedabad">Ahmedabad</option>
-                                <option value="Indore">Indore</option>
-                                <option value="Pune">Pune</option>
-                            </select>
+                            <label for="journey-date">Date of Journey:</label>
+                            <input type="date" class="form-control" id="journeyDate" name="journeyDate">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="destination">Destination:</label>
-                            <select class="form-control" id="destination" name="destination">
-                                <option value="">Select Destination</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Mumbai">Mumbai</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Ahmedabad">Ahmedabad</option>
-                                <option value="Indore">Indore</option>
-                                <option value="Pune">Pune</option>
-                            </select>
+                            <label for="journey-date">Preferred Time:</label>
+                            <input type="time" class="form-control" id="departureTime" name="departureTime">
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="departurePlace">Departure From:</label>
+                            <select class="form-control" id="departurePlace" name="departurePlace">
+                                <option selected>--Select Departure--</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="departureTime">Departure Time:</label>
                             <input type="time" class="form-control" id="departureTime" name="departureTime">
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="returnTime">Return Time:</label>
-                            <input type="time" class="form-control" id="returnTime" name="returnTime">
-                        </div>
-                    </div>
                 </div>
+
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="airlinePreference">Airline Preference:</label>
-                            <select class="custom-select" id="airlinePreference" name="airlinePreference">
-                                <option selected>Choose...</option>
-                                <option value="1">Air India</option>
-                                <option value="2">Vistara</option>
-                                <option value="3">IndiGo</option>
-                                <option value="4">GO First</option>
-                                <option value="5">Air Asia</option>
-                                <option value="6">SpiceJet</option>
-
+                            <label for="destination">Destination:</label>
+                            <select class="form-control" id="destination" name="destination">
+                                <option selected>--Select Destination--</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
                             </select>
                         </div>
                     </div>
@@ -147,23 +141,44 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="concession">Concession</label>
-                            <select class="custom-select" id="concession" name="concession">
-                                <option selected>Choose...</option>
-                                <option value="1">Student</option>
-                                <option value="2">Armed Forces</option>
-                                <option value="3">Senior Citizen</option>
-                                <!-- Add more options as needed -->
+                            <label for="airlinePreference">Airline Preference:</label>
+                            <select class="custom-select" id="airlinePreference" name="airlinePreference">
+                                <option selected>--Select Airline--</option>
+                                <option value="Air India">Air India</option>
+                                <option value="Vistara">Vistara</option>
+                                <option value="IndiGo">IndiGo</option>
+                                <option value="GO FIRST">Go First</option>
+                                <option value="AirAsia">Air Asia</option>
+                                <option value="SpiceJet">SpiceJet</option>
+                                <option value="AkasaAir">Akasa Air</option>
+                                <option value="AllianceAir">Alliance Air</option>
+                                <option value="StarAir">Star Air</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="stops">Passengers:</label>
-                            <input type="number" class="form-control" id="passengers" name="passengers" min="0">
+                            <label for="airlineCode">Airline Code:</label>
+                            <input type="text" class="form-control" id="airlineCode" name="airlineCode">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="airlineClass">Class:</label>
+                            <select class="custom-select" id="airlineClass" name="airlinePreference">
+                                <option selected>--Select Class--</option>
+                                <option value="ECONOMY India">Economy</option>
+                                <option value="PREMIUMECONOMY">Premium Economy</option>
+                                <option value="BUSINESS">Business</option>
+                                <option value="FIRST">First</option>
+                            </select>
                         </div>
                     </div>
                 </div>
