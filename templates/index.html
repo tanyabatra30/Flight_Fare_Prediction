@@ -25,6 +25,9 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#form">Flight</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -76,122 +79,119 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <form action="/predict" method="post">
-            <fieldset>
-                <legend>Flight Details</legend>
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="journey-date">Date of Journey:</label>
-                            <input type="date" class="form-control" id="journeyDate" name="journeyDate">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="journey-date">Preferred Time:</label>
-                            <input type="time" class="form-control" id="departureTime" name="departureTime">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="departurePlace">Departure From:</label>
-                            <select class="form-control" id="departurePlace" name="departurePlace">
-                                <option selected>--Select Departure--</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Mumbai">Mumbai</option>
-                                <option value="Bangalore">Bangalore</option>
-                                <option value="Hyderabad">Hyderabad</option>
-                                <option value="Kolkata">Kolkata</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Ahmedabad">Ahmedabad</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="departureTime">Departure Time:</label>
-                            <input type="time" class="form-control" id="departureTime" name="departureTime">
-                        </div>
-                    </div>
-                </div>
+        <br>
+        <br>
 
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="destination">Destination:</label>
-                            <select class="form-control" id="destination" name="destination">
-                                <option selected>--Select Destination--</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Mumbai">Mumbai</option>
-                                <option value="Bangalore">Bangalore</option>
-                                <option value="Hyderabad">Hyderabad</option>
-                                <option value="Kolkata">Kolkata</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Ahmedabad">Ahmedabad</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="stops">Number of Stops:</label>
-                            <input type="number" class="form-control" id="stops" name="stops" min="0">
-                        </div>
-                    </div>
-                </div>
+        <form action="/predict" method="post" class="flight-details-form" id="form">
+  <fieldset>
+    <legend class="label"><h3>Flight Details</h3></legend>
+    <div class="form-row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="journey-date">Date of Journey:</label>
+          <input type="date" class="form-control" id="journeyDate" name="journeyDate">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="journey-date">Preferred Time:</label>
+          <input type="time" class="form-control" id="departureTime" name="departureTime">
+        </div>
+      </div>
+    </div>
 
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="airlinePreference">Airline Preference:</label>
-                            <select class="custom-select" id="airlinePreference" name="airlinePreference">
-                                <option selected>--Select Airline--</option>
-                                <option value="Air India">Air India</option>
-                                <option value="Vistara">Vistara</option>
-                                <option value="IndiGo">IndiGo</option>
-                                <option value="GO FIRST">Go First</option>
-                                <option value="AirAsia">Air Asia</option>
-                                <option value="SpiceJet">SpiceJet</option>
-                                <option value="AkasaAir">Akasa Air</option>
-                                <option value="AllianceAir">Alliance Air</option>
-                                <option value="StarAir">Star Air</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="airlineCode">Airline Code:</label>
-                            <input type="text" class="form-control" id="airlineCode" name="airlineCode">
-                        </div>
-                    </div>
-                </div>
+    <div class="form-row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="departurePlace">Departure From:</label>
+          <select class="form-control" id="departurePlace" name="departurePlace">
+            <option selected>--Select Departure--</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="expectedDuration">Expected Duration:</label>
+          <input type="time" class="form-control" id="expectedDuration" name="expectedDuration">
+        </div>
+      </div>
+    </div>
 
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="airlineClass">Class:</label>
-                            <select class="custom-select" id="airlineClass" name="airlinePreference">
-                                <option selected>--Select Class--</option>
-                                <option value="ECONOMY India">Economy</option>
-                                <option value="PREMIUMECONOMY">Premium Economy</option>
-                                <option value="BUSINESS">Business</option>
-                                <option value="FIRST">First</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+    <div class="form-row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="destination">Destination:</label>
+          <select class="form-control" id="destination" name="destination">
+            <option selected>--Select Destination--</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="stops">Number of Stops:</label>
+          <input type="number" class="form-control" id="stops" name="stops" min="0">
+        </div>
+      </div>
+    </div>
 
-                </div>
-                <!-- <input type="submit" value="Predict Fare" class="btn btn-primary">
-        </fieldset> -->
-                <div class="center-button">
-                    <input type="submit" value="Predict Fare" class="btn btn-primary">
-                </div>
-            </fieldset>
-        </form>
+    <div class="form-row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="airlinePreference">Airline Preference:</label>
+          <select class="custom-select" id="airlinePreference" name="airlinePreference">
+            <option selected>--Select Airline--</option>
+            <option value="Air India">Air India</option>
+            <option value="Vistara">Vistara</option>
+            <option value="IndiGo">IndiGo</option>
+            <option value="GO FIRST">Go First</option>
+            <option value="AirAsia">Air Asia</option>
+            <option value="SpiceJet">SpiceJet</option>
+            <option value="AkasaAir">Akasa Air</option>
+            <option value="AllianceAir">Alliance Air</option>
+            <option value="StarAir">Star Air</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="airlineCode">Airline Code:</label>
+          <input type="text" class="form-control" id="airlineCode" name="airlineCode">
+        </div>
+      </div>
+    </div>
 
+    <div class="form-row centered-form-group">
+      <div class="form-group airline-class">
+        <label for="airlineClass">Class:</label>
+        <select class="custom-select" id="airlineClass" name="airlineClass">
+          <option selected>--Select Class--</option>
+          <option value="ECONOMY India">Economy</option>
+          <option value="PREMIUMECONOMY">Premium Economy</option>
+          <option value="BUSINESS">Business</option>
+          <option value="FIRST">First</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="center-button">
+      <input type="submit" value="Predict Fare" class="btn btn-primary">
+    </div>
+  </fieldset>
+</form>
 
         <p id="prediction"></p>
 
@@ -207,8 +207,10 @@
         <section id="contact">
             <div class="container">
                 <h2>Contact Us</h2>
-                <p>Email us at <a href="mailto:contact@flightfareprediction.com" class="email-link">contact@flightfareprediction.com</a> for any inquiries or feedback. We're alsoavailable on social media for real-time assistance and updates.</p>
-                <ul class="social-links">
+                <p>Email us at <a href="mailto:contact@flightfareprediction.com" class="email-link">contact@flightfareprediction.com</a> for any inquiries or feedback. We're also available on social media for real-time assistance and updates.</p>
+                <br>
+                <br>
+                <ul class="social-links"> 
                     <li><a href="#" class="icon"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" class="icon"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" class="icon"><i class="fab fa-instagram"></i></a></li>
